@@ -20,6 +20,23 @@
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
+/* Dark Mode Colors */
+[data-theme="dark"] {
+  --background-color: #0f1d34; /* Dark background as requested */
+  --default-color: #ffffff; /* White text in dark mode */
+  --heading-color: #ffffff; /* White headings in dark mode */
+  --surface-color: #1a2d47; /* Darker surface for cards */
+  --contrast-color: #ffffff; /* White contrast color */
+}
+
+/* Dark Mode Bold Text - Keep bold text white and bold */
+[data-theme="dark"] b,
+[data-theme="dark"] strong,
+[data-theme="dark"] .fw-bold {
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: rgba(255, 255, 255, 0.6);  /* The default color of the main navmenu links */
@@ -255,6 +272,46 @@ h6 {
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--nav-color);
+  font-size: 20px;
+  padding: 8px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  color: var(--nav-hover-color);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+/* FAQ Dark Mode Styling */
+[data-theme="dark"] .faq-item {
+  background: #1a2d47 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .faq-item h3,
+[data-theme="dark"] .faq-item .faq-toggle {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .faq-item h3:hover,
+[data-theme="dark"] .faq-item .faq-toggle:hover {
+  color: var(--nav-hover-color) !important;
+}
+
+[data-theme="dark"] .faq-item .faq-content {
+  color: #ffffff !important;
 }
 
 @media (max-width: 1200px) {
@@ -519,6 +576,31 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+
+  /* Mobile Theme Toggle */
+  .mobile-theme-toggle {
+    color: var(--nav-dropdown-color);
+    font-size: 20px;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+  }
+
+  .mobile-theme-toggle:hover {
+    color: var(--nav-dropdown-hover-color);
+    background-color: rgba(13, 66, 255, 0.1);
+  }
+
+  .mobile-theme-toggle i {
+    margin-right: 10px;
+  }
+
 }
 
 /*--------------------------------------------------------------
@@ -1993,3 +2075,12 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+ .email-link {
+    color: white;           /* makes text white */
+    text-decoration: underline; /* keeps underline */
+  }
+
+  .email-link:hover {
+    color: #ddd; /* optional: lighter shade on hover */
+  }

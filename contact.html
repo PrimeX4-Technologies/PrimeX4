@@ -41,19 +41,32 @@
         <h1 class="sitename">PrimeX4</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="./index.html">Home<br /></a>
-          </li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="./solutions.html">Our Work</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="./index.html">Home<br /></a>
+            </li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./solutions.html">Our Work</a></li>
+            <li><a href="./contact.html" class="active">Contact</a></li>
+            <li class="d-none d-xl-block">
+              <button class="theme-toggle">
+                <i class="bi bi-moon-fill"></i>
+              </button>
+            </li>
+            <!-- Mobile-only items -->
+            <li class="d-xl-none">
+              <button class="mobile-theme-toggle">
+                <i class="bi bi-moon-fill"></i>
+                <span>Dark Mode</span>
+              </button>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-      <a class="btn-getstarted" href="./contact.html">Contact</a>
+        <a class="btn-getstarted" href="./contact.html">Contact</a>
     </div>
   </header>
 
@@ -93,19 +106,20 @@
               </div>
             </div><!-- End Info Item -->
 
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <!-- <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
                 <p>077 777 7777</p>
               </div>
-            </div><!-- End Info Item -->
+            </div> -->
+            <!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>Primex4technologies@gmail.com</p>
+                <a href="mailto:primex4technologies@gmail.com" class="email-link">primex4technologies@gmail.com</a>
               </div>
             </div><!-- End Info Item -->
 
@@ -207,7 +221,7 @@
               <strong>Phone:</strong> <span>077 777 7777</span>
             </p> -->
             <p>
-              <strong>Email:</strong> <span>Primex4technologies@gmail.com</span>
+              <strong>Email:</strong> <span><a href="mailto:primex4technologies@gmail.com" class="email-link">primex4technologies@gmail.com</a></span>
             </p>
           </div>
         </div>
