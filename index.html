@@ -157,7 +157,7 @@
       }
     </style> -->
     <!-- END MAINTENANCE OVERLAY -->
-     
+
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
@@ -171,6 +171,7 @@
             <li>
               <a href="./index.html" class="active">Home<br /></a>
             </li>
+            <li><a href="./offers.html" class="offer-link">Offers</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./services.html">Services</a></li>
             <li><a href="./solutions.html">Our Work</a></li>
@@ -983,5 +984,15 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Offer tab blink feature-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const offerLink = document.querySelector(".offer-link");
+        if (offerLink) {
+          offerLink.classList.add("offer-blink");
+        }
+      });
+    </script>
   </body>
 </html>

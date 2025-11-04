@@ -2084,3 +2084,33 @@ section,
   .email-link:hover {
     color: #ddd; /* optional: lighter shade on hover */
   }
+
+  /* Blink animation for the Offers tab */
+@keyframes blinkOffer {
+     0% {
+    background-color: transparent;
+    color: #333; /* medium black */
+  }
+  50% {
+    background-color: yellow;
+    color: #000; /* dark black text when highlighted */
+  }
+  100% {
+    background-color: transparent;
+    color: #222; /* slightly darker fade back */
+  }
+}
+
+/* Styling for the Offer link to look like a soft button */
+.offer-link {
+  padding: 1px; 
+  height: 10px;         /* button-like spacing */
+  border-radius: 10px;         /* rounded corners */
+  text-decoration: none;      /* remove underline */
+}
+
+/* Apply the blinking animation */
+.offer-blink {
+  animation: blinkOffer 0.6s infinite ease-in-out;
+  font-weight: 600;
+}
