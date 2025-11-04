@@ -202,4 +202,12 @@
     initDarkMode();
   });
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const offerLink = document.querySelector('.offer-link');
+    if (offerLink) {
+      offerLink.classList.add('offer-blink');
+    }
+  });
+
+
 })();
